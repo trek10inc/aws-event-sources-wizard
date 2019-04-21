@@ -8,13 +8,13 @@ function AnswerOption(props) {
         type="radio"
         className="radioCustomButton"
         name="radioGroup"
-        checked={props.answerType === props.answer}
-        id={props.answerType}
-        value={props.answerType}
+        checked={props.next === props.answer}
+        id={props.next}
+        value={props.next}
         disabled={props.answer}
         onChange={props.onAnswerSelected}
       />
-      <label className="radioCustomLabel" htmlFor={props.answerType}>
+      <label className="radioCustomLabel" htmlFor={props.next}>
         {props.answerContent}
       </label>
     </li>
@@ -22,10 +22,10 @@ function AnswerOption(props) {
 }
 
 AnswerOption.propTypes = {
-  answerType: PropTypes.string.isRequired,
   answerContent: PropTypes.string.isRequired,
   answer: PropTypes.string.isRequired,
-  onAnswerSelected: PropTypes.func.isRequired
+  onAnswerSelected: PropTypes.func.isRequired,
+  next: PropTypes.string.isRequired
 };
 
 export default AnswerOption;

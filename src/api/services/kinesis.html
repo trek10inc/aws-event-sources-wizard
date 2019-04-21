@@ -1,0 +1,16 @@
+<p>
+    Amazon Kinesis is one of the <strong>only event source</strong> that integrates directly with AWS Lambda that provides strict ordering guaruntees. It does this in a scalable fashion via sharding and the usage of partition keys to gauruntee ordering of all related records on that partition key.
+</p>
+
+<h3>Key Info & Limits</h3>
+
+<ul>
+    <li>1MB / second / shard</li>
+    <li>1000 records / second / shard</li>
+    <li>24 hour data retention (optionally pay more for up to 7 days)</li>
+    <li>Order is only gaurunteed per partition key</li>
+    <li>Shards do not auto-scale</li>
+    <li>Number of shards can only be 3 times per 24 hours</li>
+    <li>Number of shards can only be increased by double or decreased by half.</li>
+    <li>The AWS Lambda integration polls each shard once per second</li>
+</ul>

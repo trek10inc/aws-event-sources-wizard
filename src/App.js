@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
-import logo from './svg/logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -10,16 +9,11 @@ class App extends Component {
     super(props);
 
     this.state = {
-      counter: 0,
-      questionId: 1,
+      questionId: "strictOrdering",
       question: '',
+      description: '',
       answerOptions: [],
       answer: '',
-      answersCount: {
-        Nintendo: 0,
-        Microsoft: 0,
-        Sony: 0
-      },
       result: ''
     };
 
@@ -27,64 +21,32 @@ class App extends Component {
   }
 
   componentWillMount() {
-    const shuffledAnswerOptions = quizQuestions.map(question =>
-      this.shuffleArray(question.answers)
-    );
     this.setState({
-      question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
+      question: quizQuestions[this.state.questionId].question,
+      description: quizQuestions[this.state.questionId].description,
+      answerOptions: quizQuestions[this.state.questionId].answers
     });
   }
 
-  shuffleArray(array) {
-    var currentIndex = array.length,
-      temporaryValue,
-      randomIndex;
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-  }
-
   handleAnswerSelected(event) {
+    console.log(event.currentTarget.value)
     this.setUserAnswer(event.currentTarget.value);
-
-    if (this.state.questionId < quizQuestions.length) {
-      setTimeout(() => this.setNextQuestion(), 300);
-    } else {
-      setTimeout(() => this.setResults(this.getResults()), 300);
-    }
+    setTimeout(() => this.setNextQuestion(), 300);
   }
 
   setUserAnswer(answer) {
     this.setState((state, props) => ({
-      answersCount: {
-        ...state.answersCount,
-        [answer]: state.answersCount[answer] + 1
-      },
       answer: answer
     }));
   }
 
   setNextQuestion() {
-    const counter = this.state.counter + 1;
-    const questionId = this.state.questionId + 1;
-
     this.setState({
-      counter: counter,
-      questionId: questionId,
-      question: quizQuestions[counter].question,
-      answerOptions: quizQuestions[counter].answers,
+      questionId: this.state.answer,
+      question: quizQuestions[this.state.answer].question,
+      description: quizQuestions[this.state.answer].description,
+      answerOptions: quizQuestions[this.state.answer].answers,
+      icon: quizQuestions[this.state.answer].icon || null,
       answer: ''
     });
   }
@@ -111,10 +73,12 @@ class App extends Component {
       <Quiz
         answer={this.state.answer}
         answerOptions={this.state.answerOptions}
+        description={this.state.description}
         questionId={this.state.questionId}
         question={this.state.question}
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
+        icon={this.state.icon}
       />
     );
   }
@@ -127,8 +91,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>React Quiz</h2>
+          <h2>Which AWS event source should I use?</h2>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
