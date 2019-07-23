@@ -1,5 +1,6 @@
 {
-  "name": "react-quiz",
+  "name": "aws-event-sources-wizard",
+  "homepage": "https://trek10inc.github.io/aws-event-sources-wizard",
   "version": "2.0.0",
   "private": false,
   "dependencies": {
