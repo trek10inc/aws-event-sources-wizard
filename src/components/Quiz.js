@@ -4,6 +4,17 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import Question from '../components/Question';
 import AnswerOption from '../components/AnswerOption';
 
+
+const importAll = require =>
+  require.keys().reduce((acc, next) => {
+    acc[next.replace("./", "")] = require(next);
+    return acc;
+  }, {});
+
+const services = importAll(
+  require.context("../api/services", false, /\.(html)$/)
+);
+
 function Quiz(props) {
   function renderAnswerOptions(key) {
     return (
@@ -31,7 +42,7 @@ function Quiz(props) {
       <div key={props.questionId}>
         
         <Question icon={props.icon} content={props.question || props.header} />
-        <div dangerouslySetInnerHTML={{__html: props.description}}></div>
+        <div className="description" dangerouslySetInnerHTML={{__html: services[props.description] || props.description}}></div>
         {
           props.answerOptions && <ul className="answerOptions">
             {props.answerOptions.map(renderAnswerOptions)}

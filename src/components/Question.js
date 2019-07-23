@@ -11,11 +11,6 @@ const icons = importAll(
   require.context("../svg", false, /\.(png|jpe?g|svg)$/)
 );
 
-const services = importAll(
-  require.context("../api/services", false, /\.(html)$/)
-);
-
-
 function Question(props) {
   let className = "question";
   if (props.icon) {

@@ -1,0 +1,23 @@
+<p>
+    Amazon Kinesis with Enhanced Fanout is one of the <strong>only event sources</strong> that integrates directly with AWS Lambda that
+    provides strict ordering guaruntees. It does this in a scalable fashion via sharding and the usage of partition keys
+    to gauruntee ordering of all related records on that partition key.
+</p>
+
+<p>
+    The key difference between Amazon Kinesis and Amazon Kinesis with Enhanced Fanout is that the enhanced fanout streams allow you to create additional "replicated" streams so each consumer can get a dedicated pipe to consume with higher performance and the same ordering gauruntees. There is a soft limit of 5 subscribers via enhanced fanouts, which you can open a support ticket to get increased.
+</p>
+
+<h3>Key Info & Limits</h3>
+
+<ul>
+    <li>1MB / second / shard</li>
+    <li>1000 records / second / shard</li>
+    <li><i>Soft limit</i> of 5 enhanced fanout consumers</li>
+    <li>24 hour data retention (optionally pay more for up to 7 days)</li>
+    <li>Order is only gaurunteed per partition key</li>
+    <li>Shards do not auto-scale</li>
+    <li>Number of shards can only be 3 times per 24 hours</li>
+    <li>Number of shards can only be increased by double or decreased by half.</li>
+    <li>The AWS Lambda integration polls each shard once per second</li>
+</ul>

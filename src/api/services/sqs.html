@@ -1,0 +1,18 @@
+<p>
+    Amazon SQS is the most recent entry to being a natively integrated event source for AWS Lambda. The good news is, the integration is fantastic and let's you process through an SQS queue in a highly parallel and reliable way.
+</p>
+
+<p>
+    Further, you can piggy back this integration off of SNS and CloudWatch Events, having those integrations send message to an SQS queue and then leveragig the native lambda integration on the queue. This gives you high durability and reliability in the face of downstream system failures.
+</p>
+    
+<h3>Key Info & Limits</h3>
+
+<ul>
+    <li>Cannot use FIFO Queues</li>
+    <li>120,000 inflight messages (sent to lambda, but not deleted yet)</li>
+    <li>Up to 14 day message retention</li>
+    <li>Effectively unlimited TPS</li>
+    <li>256kb message size limit</li>
+    <li>12 hour maximum message visibility timeout</li>
+</ul>

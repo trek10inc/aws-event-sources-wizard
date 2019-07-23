@@ -1,0 +1,19 @@
+<p>
+    Application Load Balancer is an interesting integration for a couple reasons. The eent structure is similar similar to the AWS_PROXY integration in API Gateway. Passing through headers, query string params, etc, and returning the response in a JSON format that is parsed to an HTTP response.
+</p>
+
+<p>
+    One of the most attractive benefits of using ALB over API Gateway is strictly fanancial benefit. Since you pay fractional amounts per request, at high scale you can save a non-trivial amount of money.
+</p>
+
+<p>
+    Another use case of ALB is to slowly migrate endpoints route by route of an application over from server based systems to Lambda based. These changes are completely invisible to your clients as they happen.
+</p>
+
+<h3>Key Info & Limits</h3>
+
+<ul>
+    <li>Lambda function must be in same account</li>
+    <li>1MB max request / response payloads</li>
+    <li>WebSockets not Supported</li>
+</ul>
