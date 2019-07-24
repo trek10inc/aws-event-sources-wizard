@@ -1,7 +1,7 @@
 {
-  "main.css": "/aws-event-sources-wizard/static/css/main.b455b2a2.chunk.css",
-  "main.js": "/aws-event-sources-wizard/static/js/main.d3206f23.chunk.js",
-  "main.js.map": "/aws-event-sources-wizard/static/js/main.d3206f23.chunk.js.map",
+  "main.css": "/aws-event-sources-wizard/static/css/main.044cd187.chunk.css",
+  "main.js": "/aws-event-sources-wizard/static/js/main.b71f5ee6.chunk.js",
+  "main.js.map": "/aws-event-sources-wizard/static/js/main.b71f5ee6.chunk.js.map",
   "static/js/1.51bd8e18.chunk.js": "/aws-event-sources-wizard/static/js/1.51bd8e18.chunk.js",
   "static/js/1.51bd8e18.chunk.js.map": "/aws-event-sources-wizard/static/js/1.51bd8e18.chunk.js.map",
   "runtime~main.js": "/aws-event-sources-wizard/static/js/runtime~main.7a38e55a.js",
@@ -10,13 +10,14 @@
   "static/media/alb.svg": "/aws-event-sources-wizard/static/media/alb.6ca4bb0e.svg",
   "static/media/apig.svg": "/aws-event-sources-wizard/static/media/apig.da7020b9.svg",
   "static/media/ddb.svg": "/aws-event-sources-wizard/static/media/ddb.daebc001.svg",
+  "static/media/eventbridge.png": "/aws-event-sources-wizard/static/media/eventbridge.0ac0b196.png",
   "static/media/kinesis.svg": "/aws-event-sources-wizard/static/media/kinesis.ecf8866f.svg",
   "static/media/logo.svg": "/aws-event-sources-wizard/static/media/logo.84287d09.svg",
   "static/media/s3.svg": "/aws-event-sources-wizard/static/media/s3.119552e8.svg",
   "static/media/sns.svg": "/aws-event-sources-wizard/static/media/sns.9d18d924.svg",
   "static/media/sqs.svg": "/aws-event-sources-wizard/static/media/sqs.36a365aa.svg",
-  "static/css/main.b455b2a2.chunk.css.map": "/aws-event-sources-wizard/static/css/main.b455b2a2.chunk.css.map",
+  "static/css/main.044cd187.chunk.css.map": "/aws-event-sources-wizard/static/css/main.044cd187.chunk.css.map",
   "index.html": "/aws-event-sources-wizard/index.html",
-  "precache-manifest.6c7e60944918de62e575d67750bfc1e1.js": "/aws-event-sources-wizard/precache-manifest.6c7e60944918de62e575d67750bfc1e1.js",
+  "precache-manifest.401702447b078e3c8255c7f9037259e7.js": "/aws-event-sources-wizard/precache-manifest.401702447b078e3c8255c7f9037259e7.js",
   "service-worker.js": "/aws-event-sources-wizard/service-worker.js"
 }

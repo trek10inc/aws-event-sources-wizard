@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d3206f23de2f12be789c",
-    "url": "/aws-event-sources-wizard/static/css/main.b455b2a2.chunk.css"
+    "revision": "b71f5ee6b059219927e1",
+    "url": "/aws-event-sources-wizard/static/css/main.044cd187.chunk.css"
   },
   {
-    "revision": "d3206f23de2f12be789c",
-    "url": "/aws-event-sources-wizard/static/js/main.d3206f23.chunk.js"
+    "revision": "b71f5ee6b059219927e1",
+    "url": "/aws-event-sources-wizard/static/js/main.b71f5ee6.chunk.js"
   },
   {
     "revision": "51bd8e18581b158ad637",
@@ -32,6 +32,10 @@ self.__precacheManifest = [
     "url": "/aws-event-sources-wizard/static/media/ddb.daebc001.svg"
   },
   {
+    "revision": "0ac0b196ccb792e02a076d9c1035eeb5",
+    "url": "/aws-event-sources-wizard/static/media/eventbridge.0ac0b196.png"
+  },
+  {
     "revision": "ecf8866f58ef07734494930fc6f66ca9",
     "url": "/aws-event-sources-wizard/static/media/kinesis.ecf8866f.svg"
   },
@@ -52,7 +56,7 @@ self.__precacheManifest = [
     "url": "/aws-event-sources-wizard/static/media/sqs.36a365aa.svg"
   },
   {
-    "revision": "42fa04e5aef087714ed8982c7954f9ce",
+    "revision": "adb41bf6653713beb8e590212cddc704",
     "url": "/aws-event-sources-wizard/index.html"
   }
 ];
