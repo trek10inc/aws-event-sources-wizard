@@ -59,16 +59,16 @@ var quizQuestions = {
     },
 
     manySubscribers: {
-        question: "Do you need to support many subscribers?",
+        question: "Do you need to support hundreds or more subscribers?",
         description: "Sometimes there are completely different parts of an organization interested in working with an event stream for many different reasons!",
         answers: [
             {
-                content: "Just my services.",
-                next: "endSQS"
+                content: "Literal millions of subscribers.",
+                next: "endSNS"
             },
             {
-                content: "There is, or will be, others.",
-                next: "endSNSCWE"
+                content: "A few dozen at most.",
+                next: "endEventBridge"
             }
         ]
     },
@@ -113,10 +113,15 @@ var quizQuestions = {
         description: "alb.html",
         icon: "alb.svg"
     },
-    endSNSCWE: {
+    endSNS: {
         question: "Simple Notification Service",
         description: "sns.html",
         icon: "sns.svg"
+    },
+    endEventBridge: {
+        question: "Amazon EventBridge",
+        description: "eventbridge.html",
+        icon: "eventbridge.png"
     },
     endSQS: {
         question: "Simple Queue Service",

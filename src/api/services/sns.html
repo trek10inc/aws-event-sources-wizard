@@ -10,19 +10,3 @@
     <li>200 subscription filters (soft limit)</li>
     <li>30,000 publish transactions per second (soft limit)</li>
 </ul>
-
-<hr />
-
-<h1>Bonus: Amazon CloudWatch Events</h1> 
-
-<p>
-    Amazon CloudWatch Events is a dark horse in this race. While not typically mentioned beyond a source of configuration or monitoring events, you can pass custom events through the system. It offers tremendous capabilities with filtering, and can send to many different destinations, <i>including directly to other AWS Accounts' CLoudWatch EventBus'.</i>
-</p>
-
-<h3>Key Info & Limits</h3>
-
-<ul>
-    <li>400 PutEvents Requests per second soft limit (soft limit)</li>
-    <li>10 entries per PutEvents, 256kb per request</li>
-    <li>750 rule target invocations per second (soft limit)</li>
-</ul>
